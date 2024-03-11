@@ -1,20 +1,25 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, View } from 'react-native';
+import HorizontalCard from './components/horaizontalCard/HorizontalCard';
+import HorizontalCardTwo from './components/horaizontalCard/HorizontalCardTwo';
+import CardWithImage from './components/CardWithImage';
+import ClickableCard from './components/ClickableCard';
+import FlatListCard from './components/list/FlatListCard';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView style={styles.mainContainer} showsVerticalScrollIndicator={false}>
+      <HorizontalCard />
+      <HorizontalCardTwo />
+      <CardWithImage />
+      <ClickableCard />
+      <FlatListCard />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+  mainContainer: {
+    backgroundColor: "white"
+  }
+})
+
